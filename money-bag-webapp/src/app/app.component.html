@@ -1,0 +1,50 @@
+<!-- Originally, the search bar with all the necessary links should go here -->
+<header class="header">
+  <div class="row">
+    <div class="col-md-2" (click)="home()">
+      <button mat-button color="primary">MoneyBag</button>
+    </div>
+    <div class="col-md-10 rightHeaderLinks">
+      <ul class="headerLinks">
+        <li (click)="aboutUs()">
+          <button mat-button color="primary">About us</button>
+        </li>
+        <li (click)="login()">
+          <button mat-button color="primary">Login</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+<div class="introduction">
+  <h1>Family Business</h1>
+  <div class="summaryInfo">
+      We connect highly qualified job-seekers directly with top companies. Let's make Mondays something to celebrate.
+  </div>
+</div>
+<div class="row infoSection">
+    <div class="col-md-5 howItWorks">
+      <p>How MoneyBag works</p>
+      <p>
+        Make a profile on Vettery and companies will reach out directly to you and request interviews. It's a stress-free way to find your dream job.
+      </p>
+      <button mat-button color="primary">Learn More</button>
+    </div>
+    <div class="col-md-2"></div>
+    <div class="col-md-5 aboutUsPicture">
+      
+    </div>
+</div>
+<!-- <ul>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
+  </li>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
+  </li>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
+  </li>
+</ul> -->
+
+<router-outlet></router-outlet>
