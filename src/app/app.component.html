@@ -1,8 +1,8 @@
 <!-- Originally, the search bar with all the necessary links should go here -->
 <header class="header">
   <div class="row">
-    <div class="col-md-2" (click)="home()">
-      <button mat-raised-button color="primary">Modern Joa</button>
+    <div class="col-md-2">
+      <button mat-raised-button color="primary" routerLink="/home">Modern Joa</button>
     </div>
     <div class="col-md-10 rightHeaderLinks">
       <ul class="headerLinks">
@@ -12,6 +12,7 @@
         <li>
           <button mat-raised-button [matMenuTriggerFor]="merchandise" color="primary">Merchandise</button>
           <mat-menu #merchandise="matMenu">
+            <button mat-menu-item>All</button>
             <button mat-menu-item [matMenuTriggerFor]="plastic"><i class="fas fa-recycle"></i> Plastic</button>
             <button mat-menu-item [matMenuTriggerFor]="paper"><i class="fas fa-copy"></i> Paper</button>
             <mat-menu #plastic="matMenu">
@@ -35,25 +36,6 @@
     </div>
   </div>
 </header>
-<div class="introduction">
-  <h1>Family Business</h1>
-  <div class="summaryInfo">
-      We connect highly qualified job-seekers directly with top companies. Let's make Mondays something to celebrate.
-  </div>
-</div>
-<div class="row infoSection">
-    <div class="col-md-5 howItWorks">
-      <p>How MoneyBag works</p>
-      <p>
-        Make a profile on Vettery and companies will reach out directly to you and request interviews. It's a stress-free way to find your dream job.
-      </p>
-      <button mat-raised-button color="primary">Learn More</button>
-    </div>
-    <div class="col-md-2"></div>
-    <div class="col-md-5 aboutUsPicture">
-      
-    </div>
-</div>
 <!-- <ul>
   <li>
     <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
@@ -65,5 +47,7 @@
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
 </ul> -->
-
+<!-- <div [@routeAnimations]="prepareRoute(outlet)" >
+  <router-outlet #outlet="outlet"></router-outlet>
+</div> -->
 <router-outlet></router-outlet>
